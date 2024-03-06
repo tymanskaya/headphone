@@ -4,7 +4,6 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {ContainerMax} from "../../../components/ContainerMax";
 import notes from "../../../assets/images/freepik-background-complete-inject-3_1.webp"
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../Styles/Theme";
 
 export const Contact = () => {
@@ -44,7 +43,7 @@ const Contacts = styled.div`
     align-items: center;
     max-width: 712px;
     width: 100%;
-    height: 292px;
+    height: 291px;
     border-radius: 20px;
     background: rgb(255, 244, 244);
 `
