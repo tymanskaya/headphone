@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/headphone/static/css/main.31d6cfe0.css",
+    "main.js": "/headphone/static/js/main.4affb675.js",
+    "static/js/787.25eaef86.chunk.js": "/headphone/static/js/787.25eaef86.chunk.js",
+    "static/media/Rectangle-72.webp": "/headphone/static/media/Rectangle-72.6f9c2a38c7a06fd3931f.webp",
+    "static/media/Immage.webp": "/headphone/static/media/Immage.59e33e3e5c7f3ed8c22d.webp",
+    "static/media/sprite-list.svg": "/headphone/static/media/sprite-list.3619a682dec735f92f362a3687457d6c.svg",
+    "static/media/image-6.webp": "/headphone/static/media/image-6.01bcadff068c73d604b8.webp",
+    "static/media/pngwing-4.webp": "/headphone/static/media/pngwing-4.a099843ffaccee219e35.webp",
+    "static/media/Rectangle-76-3-2.webp": "/headphone/static/media/Rectangle-76-3-2.f9e19279541bc8a85e82.webp",
+    "static/media/pngwing-5.webp": "/headphone/static/media/pngwing-5.0626c15f48a1c3985f1c.webp",
+    "static/media/pngwing-6.webp": "/headphone/static/media/pngwing-6.e3b711783021f12bd504.webp",
+    "static/media/freepik-Music-inject-4_1.webp": "/headphone/static/media/freepik-Music-inject-4_1.68752a20a415f9de6992.webp",
+    "static/media/freepik-background-complete-inject-3_1.webp": "/headphone/static/media/freepik-background-complete-inject-3_1.62edca8ce5adb8759563.webp",
+    "static/media/freepik-Notes-inject-2.webp": "/headphone/static/media/freepik-Notes-inject-2.ebd3ce33150baf901b3c.webp",
+    "index.html": "/headphone/index.html",
+    "static/media/Group-54.webp": "/headphone/static/media/Group-54.64a640daa82b3521a6c4.webp",
+    "static/media/Group-53.webp": "/headphone/static/media/Group-53.8404c0c25d845f2e75c8.webp",
+    "main.4affb675.js.map": "/headphone/static/js/main.4affb675.js.map",
+    "787.25eaef86.chunk.js.map": "/headphone/static/js/787.25eaef86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.4affb675.js"
+  ]
+}
