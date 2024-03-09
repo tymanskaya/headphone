@@ -13,7 +13,7 @@ export const Button = styled.button`
     font-size: 22px;
     font-weight: 500;
     line-height: 140%;
-    letter-spacing: 0;
+    letter-spacing: 1px;
   
 
 
