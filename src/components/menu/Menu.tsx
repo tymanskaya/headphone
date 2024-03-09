@@ -4,7 +4,7 @@ import {Icon} from "../icon/Icon";
 import {theme} from "../../Styles/Theme";
 import {GlobalStyle} from "../../Styles/GlobalStyled";
 
-export const Menu = (props:{menuItems: Array<string>}) => {
+export const Menu = (props:{menuItems: Array<string>, direction: string}) => {
     return (
         <StyledMenu>
             <ul>
@@ -17,10 +17,12 @@ export const Menu = (props:{menuItems: Array<string>}) => {
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.nav<{direction?: string}>`
     ul {
         display: flex;
+        flex-direction: ${props => props.direction};
         gap: 30px;
+        
         
     }
     

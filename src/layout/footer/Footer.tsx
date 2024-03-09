@@ -15,7 +15,7 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <Logo/>
-                    <Menu menuItems={items}/>
+                    <Menu menuItems={items} direction={'row'}/>
                     <SocialList>
                         <SocialItem>
                             <SocialLink href=''>

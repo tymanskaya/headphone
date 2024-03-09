@@ -6,7 +6,12 @@ export const theme = {
         accent: 'rgb(255, 73, 72)',
         fontTitle: 'rgb(24, 2, 2)',
         fontSubTitle: 'rgb(24, 24, 2 0.7)',
-        
-}
+},
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile:"screen and (max-width: 576px)"
+
+    }
+
 
 }

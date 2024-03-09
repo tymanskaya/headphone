@@ -33,7 +33,9 @@ export const Product = (props:ProductPropsStyle) => {
 
 const StyledProduct = styled.div`
 display: flex;
-width: 332px;
+
+    width: 100%;
+    
 
     flex-direction: column;
  gap: 30px;
@@ -58,8 +60,6 @@ const LinkCard = styled.a<{ color: string }>`
     border-radius: 50px;
     border: 6px solid ${theme.colors.iconBG};
     background: ${props => props.color};
-
-
     position: absolute;
     top: -23px;
     right: -30px;
@@ -75,7 +75,7 @@ const PhotoHeadPhones = styled.img`
     position: absolute;
     top: -54px;
     left: 24px;
-    max-width: 255px;
+    //max-width: 255px;
     width: 100%;
  
 `

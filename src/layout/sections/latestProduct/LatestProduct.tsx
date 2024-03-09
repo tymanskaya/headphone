@@ -61,4 +61,5 @@ const Products = styled.div`
  display: flex;
     justify-content: space-between;
     gap: 63px;
+    width: 100%;
 `
