@@ -31,6 +31,7 @@ export const Navigation = () => {
 const NavigationlList = styled.ul`
  display: flex;
     gap: 60px;
+    
     @media ${theme.media.mobile}{
         display: none;
     }

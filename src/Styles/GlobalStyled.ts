@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     section {
-        padding: 65px 0;
+        padding: 85px 0;
     }
     a {
         text-decoration: none;

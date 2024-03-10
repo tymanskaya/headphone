@@ -39,7 +39,8 @@ export const LatestProduct = () => {
 };
 
 const StyleLatestProduct = styled.section`
-    display: flex;
+    display: none;
+    //display: flex;
     flex-direction: column;
     align-items: center;
 `

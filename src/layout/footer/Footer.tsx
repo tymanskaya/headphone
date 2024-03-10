@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Logo} from "../../components/logo/Logo";
-import {MenuFooter} from "./menuFooter/MenuFooter";
 import {Icon} from "../../components/icon/Icon";
 import {Menu} from "../../components/menu/Menu";
 import {theme} from "../../Styles/Theme";
@@ -15,7 +14,7 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <Logo/>
-                    <Menu menuItems={items} direction={'row'}/>
+                    <Menu menuItems={items}/>
                     <SocialList>
                         <SocialItem>
                             <SocialLink href=''>

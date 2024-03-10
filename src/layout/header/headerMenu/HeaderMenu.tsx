@@ -1,21 +1,20 @@
 import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {Menu} from "../../../components/menu/Menu";
-import {Navigation} from "../navigation/Navigation";
 import {theme} from "../../../Styles/Theme";
 
-const items= ["Home", "About", "Product"]
+
+const items= ["Home", "About", "Product", ]
 export const HeaderMenu = () => {
 
     return (
         <HeaderMenuStyled>
-            <StyledBurgerMenu isOpen={true}>
+            <StyledBurgerMenu isOpen={false}>
                 <span></span>
                 <span></span>
             </StyledBurgerMenu>
-            <MenuPopup isOpen={true}>
-                <Menu menuItems={items} direction={'column'}/>
-                <Navigation/>
+            <MenuPopup isOpen={false}>
+                <Menu menuItems={items}/>
             </MenuPopup>
 
         </HeaderMenuStyled>
@@ -24,10 +23,13 @@ export const HeaderMenu = () => {
 };
 
 const HeaderMenuStyled = styled.div`
-
+  @media ${theme.media.mobile}{
+      display: none;
+  }
 `
 
 const StyledBurgerMenu = styled.button<{isOpen: boolean}> `
+    position: relative;
     width: 38px;
     height: 25px;
     cursor: pointer;
@@ -36,52 +38,61 @@ const StyledBurgerMenu = styled.button<{isOpen: boolean}> `
     border: none;
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    position: relative;
+    gap: 9px;
+    
     span {
         display: block;
         width: 38px;
         height: 3px;
         background-color: rgb(255, 255, 255);
-        position: absolute;
-        top: 15px;
-    }
-    
-    ${props => props.isOpen && css<{isOpen: boolean}>`
-        background-color: rgb(255, 255, 255, 0);
-`}
-    span:first-child {
-        top: 0px;
+        border-radius: 3px;
+        position: relative;
+        
         ${props => props.isOpen && css<{isOpen: boolean}>`
         background-color: rgb(255, 255, 255, 0);
-`}
-    }
-    &::before {
-        content: "";
-        display: block;
-        width: 29px;
-        height: 3px;
-        background-color: rgb(255, 255, 255);
-        position: absolute;
-        top: 8px;
-        right: 0px;
-        ${props => props.isOpen && css<{isOpen: boolean}>`
+    `}
+        
+        &:first-child::after{
+            content: "";
+            display: block;
+            width: 29px;
+            height: 3px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+            position: absolute;
+            top: 6px;
+            right: 0px;
+            ${props => props.isOpen && css<{isOpen: boolean}>`
         transform: rotate(-45deg) translateY(0);
+                top: 11px;
+                width: 40px;
+     
+             
+            
 `}
-    }
-    &::after {
-        content: "";
-        display: block;
-        width: 29px;
-        height: 3px;
-        background-color: rgb(255, 255, 255);
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        ${props => props.isOpen && css<{isOpen: boolean}>`
-            transform: rotate(-45deg) translateY(0);
+        }
+        &:nth-child(2)::before {
+            content: "";
+            display: block;
+            width: 29px;
+            height: 3px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+            position: absolute;
+            top: 6px;
+            right: 0px;
+            ${props => props.isOpen && css<{isOpen: boolean}>`
+        transform: rotate(45deg) translateY(0);
+       width: 40px;
+                top: 0px;
+           
+                
+            
 `}
+        }
     }
+        
+   
 `
 const MenuPopup = styled.div<{isOpen: boolean}>`
    position: fixed;
@@ -93,6 +104,7 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
     right: 0;
     z-index: 99999;
     display: none;
+
     
     ${props => props.isOpen && css<{isOpen: boolean}>`
         display: flex;
@@ -100,10 +112,14 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
         align-items: center;
         justify-content: center;
         gap: 20px;
-        
     `
-
 }
+    ul{
+        flex-direction: column;
+        text-align: center;
+        
+    }
     
+ 
     
 `
