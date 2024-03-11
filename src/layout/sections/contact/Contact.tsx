@@ -5,6 +5,7 @@ import {Button} from "../../../components/Button";
 import {ContainerMax} from "../../../components/ContainerMax";
 import notes from "../../../assets/images/freepik-background-complete-inject-3_1.webp"
 import {theme} from "../../../Styles/Theme";
+import {font} from "../../../Styles/Common";
 
 export const Contact = () => {
     return (
@@ -49,9 +50,13 @@ const Contacts = styled.div`
 `
 const BackgroundWrapper = styled.div`
     background-image: url(${notes});
-    //width: 100%;
     display: flex;
     justify-content: center;
+    
+    @media ${theme.media.tablet} {
+        background-image: none;
+        
+    }
     
 `
 const Inform = styled.div`
@@ -65,11 +70,9 @@ const Inform = styled.div`
 `
 
 const Text = styled.p`
+    ${font({family:"'Rubik', sans-serif", weight: 400, Fmax: 16, Fmin: 16  })};
     color: ${theme.colors.fontTitle};
     opacity: 0.7;
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
     line-height: 150%;
     text-align: center;
 
@@ -80,31 +83,39 @@ padding: 17px 30px;
     margin-top: 30px;
     width: 100%;
     min-height: 61px;
+    height: 100%;
     border-radius: 73px;
     background-color: ${theme.colors.iconBG};
     position: relative;
     display: flex;
     
-    Button{
+    ${Button}{
         position: absolute;
         background-color: ${theme.colors.accent};
         color: ${theme.colors.iconBG};
         top: 0;
         right: 0;
+        bottom: 0;
+        @media ${theme.media.mobile}{
+            width: 100px;
+
+        }
+        
     }
+
 
 `
 const Email = styled.input`
+    
     max-width: 250px;
     width: 100%;
     border: none;
     outline: none;
+    ${font({family:"'Rubik', sans-serif", weight: 400, Fmax: 18, Fmin: 14  })};
     color: ${theme.colors.fontTitle};
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
     line-height: 150%;
     text-align: left;
+    
 
 
 

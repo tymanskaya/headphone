@@ -6,15 +6,16 @@ import {Icon} from "../../components/icon/Icon";
 import {Menu} from "../../components/menu/Menu";
 import {theme} from "../../Styles/Theme";
 import {Container} from "../../components/Container";
+import {MenuFooter} from "./menuFooter/MenuFooter";
 
 const items= ["Home", "About", "Product"]
 export const Footer = () => {
     return (
         <StyleFooter>
             <Container>
-                <FlexWrapper justify={'space-between'} align={'center'}>
+                <FlexWrapper justify={'space-between'} align={'center'} wrap={'wrap'}>
                     <Logo/>
-                    <Menu menuItems={items}/>
+                    <MenuFooter menuItems={items}/>
                     <SocialList>
                         <SocialItem>
                             <SocialLink href=''>
@@ -44,6 +45,13 @@ export const Footer = () => {
 const StyleFooter = styled.footer`
     background: ${theme.colors.secondaryBG};
     padding: 62px 0 61px 0;
+    
+    @media ${theme.media.tablet}{
+        ${FlexWrapper} {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
     
   
     

@@ -1,32 +1,40 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../../Styles/Theme";
+import {font} from "../../../Styles/Common";
 
 
-export const MenuFooter = () => {
+export const MenuFooter = (props:{menuItems: Array<string>}) => {
     return (
-        <StyleMenuFooter>
-                <ul>
-                    <li>
-                        <a href=""> </a></li>
-                    <li>
-                        <a href="">About</a></li>
-                    <li>
-                        <a href="">Product</a></li>
-                </ul>
-        </StyleMenuFooter>
+        <StyledMenuFooter>
+            <ul>
+                {props.menuItems.map((item, index) => {
+                    return <ListItem key={index}>
+                        <Link href="">{item}</Link></ListItem>
+                })}
+            </ul>
+        </StyledMenuFooter>
     );
 };
 
-const StyleMenuFooter = styled.nav`
-    display: flex;
-    max-width: 278px;
-    width: 100%;
-    border: 2px solid green;
-    
+const StyledMenuFooter = styled.nav`
     ul {
         display: flex;
-        justify-content: space-between;
         gap: 30px;
+        
+        @media ${theme.media.tablet}{
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
+`
+const ListItem = styled.li`
+`
+
+const Link = styled.a`
+    ${font({family:"'Rubik', sans-serif", weight: 500, Fmax: 22, Fmin: 20  })};
+    color: ${theme.colors.iconBG};
+    line-height: 140%;
+    text-align: left;
 `
