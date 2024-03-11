@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/headphone/static/css/main.31d6cfe0.css",
-    "main.js": "/headphone/static/js/main.4affb675.js",
+    "main.js": "/headphone/static/js/main.32fa8127.js",
     "static/js/787.25eaef86.chunk.js": "/headphone/static/js/787.25eaef86.chunk.js",
     "static/media/Rectangle-72.webp": "/headphone/static/media/Rectangle-72.6f9c2a38c7a06fd3931f.webp",
     "static/media/Immage.webp": "/headphone/static/media/Immage.59e33e3e5c7f3ed8c22d.webp",
@@ -17,11 +17,11 @@
     "index.html": "/headphone/index.html",
     "static/media/Group-54.webp": "/headphone/static/media/Group-54.64a640daa82b3521a6c4.webp",
     "static/media/Group-53.webp": "/headphone/static/media/Group-53.8404c0c25d845f2e75c8.webp",
-    "main.4affb675.js.map": "/headphone/static/js/main.4affb675.js.map",
+    "main.32fa8127.js.map": "/headphone/static/js/main.32fa8127.js.map",
     "787.25eaef86.chunk.js.map": "/headphone/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.4affb675.js"
+    "static/js/main.32fa8127.js"
   ]
 }
