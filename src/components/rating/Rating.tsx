@@ -57,6 +57,7 @@ const Stars = styled.p`
     width: 192px;
     height: 30px;
     color: rgb(253, 174, 56);
+    white-space: nowrap;
 
     
 `

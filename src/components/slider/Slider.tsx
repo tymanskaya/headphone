@@ -12,6 +12,11 @@ export const Slider = () => {
 
 const Slide = styled.div`
     max-width: 500px;
+    width: 100%;
     outline: 1px solid #e78fbf;
+    
+    img{
+        width: 100%;
+    }
 
 `

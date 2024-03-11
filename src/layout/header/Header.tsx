@@ -6,6 +6,7 @@ import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Navigation} from "./navigation/Navigation";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
+import {theme} from "../../Styles/Theme";
 
 
 export const Header = () => {

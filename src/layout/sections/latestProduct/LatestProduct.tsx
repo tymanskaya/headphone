@@ -13,7 +13,7 @@ export const LatestProduct = () => {
     return (
         <StyleLatestProduct>
             <Container>
-                <FlexWrapper direction={'column'} align={'center'} gap={'25px'}>
+                <FlexWrapper direction={'column'} align={'center'} gap={'25px'} wrap={'wrap'}>
                     <SectionTitle>Our Latest Product</SectionTitle>
                     <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis nunc ipsum aliquam, ante. </Text>
                     <Products>
@@ -39,8 +39,8 @@ export const LatestProduct = () => {
 };
 
 const StyleLatestProduct = styled.section`
-    display: none;
-    //display: flex;
+  
+    display: flex;
     flex-direction: column;
     align-items: center;
 `
@@ -60,7 +60,9 @@ const Text = styled.p`
 `
 const Products = styled.div`
  display: flex;
-    justify-content: space-between;
-    gap: 63px;
+    justify-content: space-around;
+    padding-right: 20px;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
 `

@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {theme} from "../../../../Styles/Theme";
 import cart from "../../../../assets/images/Vector-10.svg"
 import {Icon} from "../../../../components/icon/Icon";
+import {font} from "../../../../Styles/Common";
 
 type ProductPropsStyle = {
     src: string
@@ -32,13 +33,12 @@ export const Product = (props:ProductPropsStyle) => {
 };
 
 const StyledProduct = styled.div`
-display: flex;
-
+    display: flex;
+    min-height: 500px;
+    max-width: 332px;
     width: 100%;
-    
-
     flex-direction: column;
- gap: 30px;
+    gap: 30px;
     
 
 `
@@ -66,24 +66,19 @@ const LinkCard = styled.a<{ color: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
-    
- 
-
 `
 
 const PhotoHeadPhones = styled.img`
     position: absolute;
     top: -54px;
     left: 24px;
-    //max-width: 255px;
+    max-width: 255px;
     width: 100%;
  
 `
 const NameHeadPhones = styled.span`
+    ${font({family:"'Rubik', sans-serif", weight: 400, Fmax: 22, Fmin: 18  })};
     color: ${theme.colors.fontTitle};
-    font-family: 'Rubik', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
     line-height: 140%;
     text-align: left;
 
@@ -91,12 +86,11 @@ const NameHeadPhones = styled.span`
 
 `
 const Price = styled.span`
+    ${font({family:"'Rubik', sans-serif", weight: 500, Fmax: 22, Fmin: 18  })};
     color: ${theme.colors.fontTitle};
-    font-family: 'Rubik', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 140%
+    line-height: 140%;
     text-align: center;
+    white-space: nowrap;
 
 
 `

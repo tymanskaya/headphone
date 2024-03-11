@@ -3,6 +3,7 @@ import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 import {theme} from "../../../../Styles/Theme";
 import ellipse from "../../../../assets/images/Ellipse 23.svg"
+import {font} from "../../../../Styles/Common";
 
 type SpecificationPropsStyle = {
     icon: string
@@ -37,7 +38,6 @@ const IconWrapper = styled.div`
     height: 69px;
     border: 2px solid rgb(253, 216, 216);
     border-radius: 50%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,6 @@ const IconWrapper = styled.div`
         border-radius: 50%;
         width: 98px;
         height: 98px;
-        
         border: 8px solid rgb(246, 128, 128);
         opacity: 0.5;
         position: absolute;
@@ -66,7 +65,6 @@ const IconWrapper = styled.div`
         border-radius: 50%;
         transform: rotate(45deg);
         position: absolute;
-        
     }
 
 
@@ -74,37 +72,26 @@ const IconWrapper = styled.div`
 const SpecificationWrapper = styled.div`
 display: flex;
 flex-direction: column;
-    a{
+    a{   
+        ${font({family:"'Rubik', sans-serif", weight: 500, Fmax: 16, Fmin: 16  })};
         color: ${theme.colors.accent};
-        font-family: 'Rubik', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
         line-height: 150%;
         letter-spacing: 0;
         text-align: left;
-
-
     }
 `
 const Title = styled.h3`
+    ${font({family:"'Rubik', sans-serif", weight: 500, Fmax: 31, Fmin: 24  })};
     color: ${theme.colors.fontTitle};
-    font-family: 'Rubik', sans-serif;
-    font-size: 31px;
-    font-weight: 500;
     line-height: 140%;
     letter-spacing: 0;
     text-align: left;
-    
 `
 const Text = styled.span`
+    ${font({family:"'Rubik', sans-serif", weight: 400, Fmax: 16, Fmin: 16  })};
     color: ${theme.colors.fontTitle};
     opacity: 0.7;
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
     line-height: 150%;
     letter-spacing: 0%;
     text-align: left;
-
-
 `
