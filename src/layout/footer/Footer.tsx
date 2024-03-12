@@ -1,84 +1,58 @@
 import React from 'react';
-import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Logo} from "../../components/logo/Logo";
 import {Icon} from "../../components/icon/Icon";
-import {Menu} from "../../components/menu/Menu";
-import {theme} from "../../Styles/Theme";
 import {Container} from "../../components/Container";
 import {MenuFooter} from "./menuFooter/MenuFooter";
+import {S} from "../footer/Footer_Styles"
 
 const items= ["Home", "About", "Product"]
-export const Footer = () => {
+const socialItemData =[
+    {
+    iconId: 'inst',
+    width: '21px',
+    height: '21px',
+    viewBox: '0 0 23 23'
+    },
+    {
+        iconId: 'twitter',
+        width: '23px',
+        height: '18px',
+        viewBox: '0 0 24 20'
+    },
+    {
+        iconId: 'face',
+        width: '11px',
+        height: '20px',
+        viewBox: '0 0 13 22'
+    }
+
+]
+export const Footer: React.FC = () => {
     return (
-        <StyleFooter>
+        <S.Footer>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'} wrap={'wrap'}>
                     <Logo/>
                     <MenuFooter menuItems={items}/>
-                    <SocialList>
-                        <SocialItem>
-                            <SocialLink href=''>
-                                {/* eslint-disable-next-line react/jsx-no-undef */}
-                                <Icon iconId={'inst'} width={'21px'} height={'21px'} viewBox={'0 0 23 23'}/>
-                            </SocialLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialLink href=''>
-                                {/* eslint-disable-next-line react/jsx-no-undef */}
-                                <Icon iconId={'twitter'} width={'23px'} height={'18px'} viewBox={'0 0 24 20'}/>
-                            </SocialLink>
-                        </SocialItem>
-                        <SocialItem>
-                            <SocialLink href=''>
-                                {/* eslint-disable-next-line react/jsx-no-undef */}
-                                <Icon iconId={'face'} width={'11px'} height={'20px'} viewBox={'0 0 13 22'}/>
-                            </SocialLink>
-                        </SocialItem>
-                    </SocialList>
+                    <S.SocialList>
+                        {socialItemData.map((s, index) => {
+                            return (
+                                <S.SocialItem key={index}>
+                                    <S.SocialLink href=''>
+                                        {/* eslint-disable-next-line react/jsx-no-undef */}
+                                        <Icon iconId={s.iconId}
+                                              width={s.width}
+                                              height={s.height}
+                                              viewBox={s.viewBox}/>
+                                    </S.SocialLink>
+                                </S.SocialItem>
+                            )
+                        })}
+                    </S.SocialList>
                 </FlexWrapper>
             </Container>
-        </StyleFooter>
+        </S.Footer>
     );
 };
 
-const StyleFooter = styled.footer`
-    background: ${theme.colors.secondaryBG};
-    padding: 62px 0 61px 0;
-    
-    @media ${theme.media.tablet}{
-        ${FlexWrapper} {
-            flex-direction: column;
-            gap: 30px;
-        }
-    }
-    
-  
-    
-`
-const SocialList = styled.ul`
- display: flex;
-    gap: 35px;
-`
-const SocialItem = styled.li`
-
-`
-const SocialLink = styled.a`
-    background-color: ${theme.colors.iconBG};
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: ${theme.colors.accent};
-
-    &:hover {
-       transform: translateY(-4px);
-  
-
-    }
-
-`

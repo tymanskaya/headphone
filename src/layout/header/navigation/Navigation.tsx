@@ -3,7 +3,7 @@ import {Icon} from "../../../components/icon/Icon";
 import styled from "styled-components";
 import {theme} from "../../../Styles/Theme";
 
-export const Navigation = () => {
+export const Navigation: React.FC = () => {
     return (
         <NavigationlList>
             <NavigationItem>

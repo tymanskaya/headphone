@@ -5,12 +5,13 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
-export const LastCollection = () => {
+export const LastCollection: React.FC = () => {
     return (
         <StyledLastCollection>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} gap={'70px'}>
-                    <SectionTitle width={'470px'} textAlign={'center'} >Our Latest colour collection 2021</SectionTitle>
+                    <SectionTitle width={'470px'}
+                                  textAlign={'center'} >Our Latest colour collection 2021</SectionTitle>
                     <Slider/>
                 </FlexWrapper>
 

@@ -1,45 +1,33 @@
-import React from 'react';
-import {Menu} from "../../../components/menu/Menu";
 import {theme} from "../../../Styles/Theme";
 import styled, {css} from "styled-components";
+import {font} from "../../../Styles/Common";
 
-const items= ["Home", "About", "Product"]
-export const MobileMenu = () => {
-    return (
-        <MobileMenuStyled>
-            <StyledBurgerMenu isOpen={false}>
-                <span></span>
-                <span></span>
-            </StyledBurgerMenu>
-            <MenuPopup isOpen={false}>
-                <Menu menuItems={items} font={'30px'}/>
-                <NavigationMobile>
-                    <li>
-                        <a href="/">Search</a>
-                    </li>
-                    <li>
-                        <a href="/">Basket</a>
-                    </li>
-                    <li>
-                        <a href="/">Login</a>
-                    </li>
-                </NavigationMobile>
-            </MenuPopup>
+//Menu
 
-        </MobileMenuStyled>
-
-    );
-};
-
-const MobileMenuStyled = styled.div`
-    display: none;
-    
-    @media ${theme.media.mobile}{
-        display: block;
+const StyledMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
     }
-
+    
+`
+const ListItem = styled.li`
+`
+const Link = styled.a`
+    ${font({family:"'Rubik', sans-serif", weight: 500, Fmax: 30, Fmin: 30  })};
+    color: ${theme.colors.iconBG};
+    font-family: 'Rubic', sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: left;
 `
 
+//MobileMenu
+
+
+const MobileMenuStyled = styled.div`
+`
 const StyledBurgerMenu = styled.button<{isOpen: boolean}> `
     position: relative;
     width: 38px;
@@ -125,14 +113,13 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
         justify-content: center;
         gap: 20px;
     `
-    }
+}
     ul{
         flex-direction: column;
         text-align: center;
 
     }
 `
-
 const NavigationMobile = styled.ul`
     display: flex;
     flex-direction: row;
@@ -154,3 +141,23 @@ const NavigationMobile = styled.ul`
     }
 `
 
+//DekstopMenu
+
+const StyledDesctopMenu = styled.div`
+
+`
+
+
+export const S ={
+    StyledMenu,
+    ListItem,
+    Link,
+    MobileMenuStyled,
+    StyledBurgerMenu,
+    MenuPopup,
+    NavigationMobile,
+    StyledDesctopMenu
+
+
+
+}

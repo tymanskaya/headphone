@@ -16,10 +16,12 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(45.89deg, rgb(255, 146, 146) -7.333%, rgb(222, 81, 80) 90.222%);
     }
     
     section {
         padding: 85px 0;
+        background: ${theme.colors.iconBG};
         
         @media ${theme.media.mobile}{
             padding: 65px 0;
