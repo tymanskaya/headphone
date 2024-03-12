@@ -23,7 +23,7 @@ const contentData =[
 
 
 ]
-export const ContentsHeadPhones = () => {
+export const ContentsHeadPhones: React.FC = () => {
     return (
         <S.ContentsHeadPhones>
             <Container>

@@ -3,6 +3,17 @@ import {Menu} from "../../headerMenu/menu/Menu";
 import {S} from "../../headerMenu/HeaderMenu_Styles"
 
 const items= ["Home", "About", "Product"]
+const navigationMobileStyle=[
+    {
+        title: 'Search',
+    },
+    {
+        title: 'Basket',
+    },
+    {
+        title: 'Login',
+    },
+]
 export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props:{menuItems: Array<string>})  => {
     return (
         <S.MobileMenuStyled>
@@ -13,15 +24,13 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props:{menuItem
             <S.MenuPopup isOpen={false}>
                 <Menu menuItems={props.menuItems} />
                 <S.NavigationMobile>
-                    <li>
-                        <a href="/public">Search</a>
-                    </li>
-                    <li>
-                        <a href="/public">Basket</a>
-                    </li>
-                    <li>
-                        <a href="/public">Login</a>
-                    </li>
+                    {navigationMobileStyle.map((s, index) =>{
+                        return (
+                            <li key={index}>
+                                <a href="/public">{s.title}</a>
+                            </li>
+                        )
+                    })}
                 </S.NavigationMobile>
             </S.MenuPopup>
 

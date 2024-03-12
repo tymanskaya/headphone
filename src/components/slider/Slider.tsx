@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import rectangle from '../../assets/images/Rectangle-76-3-2.webp'
 
-export const Slider = () => {
+export const Slider: React.FC = () => {
     return (
         <Slide>
             <img src={rectangle}/>
