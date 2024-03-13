@@ -5,14 +5,15 @@ import {S} from "../../headerMenu/HeaderMenu_Styles";
 
 const items= ["Home", "About", "Product", ]
 export const DesctopMenu: React.FC<{menuItems: Array<string>}> = (props:{menuItems: Array<string>}) => {
-
+    const [menuIsOpen, setmenuIsOpen] = useState(false)
+    const onBurgerBtnClick = () => {setmenuIsOpen(!menuIsOpen)}
     return (
         <S.StyledDesctopMenu>
-            <S.StyledBurgerMenu isOpen={false}>
+            <S.StyledBurgerMenu isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <span></span>
                 <span></span>
             </S.StyledBurgerMenu>
-            <S.MenuPopup isOpen={false}>
+            <S.MenuPopup isOpen={menuIsOpen} onClick={()=> {setmenuIsOpen(false)}}>
                 <Menu menuItems={props.menuItems} />
             </S.MenuPopup>
         </S.StyledDesctopMenu>
