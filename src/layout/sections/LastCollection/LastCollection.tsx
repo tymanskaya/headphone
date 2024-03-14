@@ -22,7 +22,7 @@ export const LastCollection: React.FC = () => {
 };
 
 const StyledLastCollection = styled.section`
- 
+
     display: flex;
     flex-direction: column;
     align-items: center;
