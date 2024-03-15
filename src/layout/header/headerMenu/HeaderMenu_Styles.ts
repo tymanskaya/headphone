@@ -103,24 +103,29 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
     bottom: 0;
     right: 0;
     z-index: 99999;
-    display: none;
-
-
-    ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    `
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: 1s ease-in-out;
+    gap: 30px;
     ul{
         flex-direction: column;
         text-align: center;
+        gap: 10px;
+        transition: 1s ease-in-out;
 
     }
+        ${props => props.isOpen && css<{isOpen: boolean}>`
+    transform: translateX(0);
+            & ul {
+                gap: 30px;
+            }
+`}
+    
 `
-const NavigationMobile = styled.ul`
+ const NavigationMobile = styled.ul`
     display: flex;
     flex-direction: row;
     gap: 20px;

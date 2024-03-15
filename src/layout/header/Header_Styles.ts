@@ -44,8 +44,8 @@ const NavigationlLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: ${theme.colors.accent};
+    transition: ${theme.animations.transition};
 
     &:hover {
        transform: translateY(-4px);

@@ -13,6 +13,7 @@ export const Button = styled.button`
     color: ${theme.colors.accent};
     line-height: 140%;
     letter-spacing: 0;
+  
     
   
 

@@ -7,7 +7,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const LastCollection: React.FC = () => {
     return (
-        <StyledLastCollection>
+        <StyledLastCollection id={"latestCollection"}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} gap={'70px'}>
                     <SectionTitle width={'470px'}

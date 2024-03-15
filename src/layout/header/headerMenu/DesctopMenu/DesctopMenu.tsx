@@ -3,8 +3,10 @@ import {Menu} from "../../headerMenu/menu/Menu";
 import {S} from "../../headerMenu/HeaderMenu_Styles";
 
 
-const items= ["Home", "About", "Product", ]
-export const DesctopMenu: React.FC<{menuItems: Array<string>}> = (props:{menuItems: Array<string>}) => {
+
+
+
+export const DesctopMenu: React.FC = () => {
     const [menuIsOpen, setmenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => {setmenuIsOpen(!menuIsOpen)}
     return (
@@ -14,7 +16,7 @@ export const DesctopMenu: React.FC<{menuItems: Array<string>}> = (props:{menuIte
                 <span></span>
             </S.StyledBurgerMenu>
             <S.MenuPopup isOpen={menuIsOpen} onClick={()=> {setmenuIsOpen(false)}}>
-                <Menu menuItems={props.menuItems} />
+                <Menu/>
             </S.MenuPopup>
         </S.StyledDesctopMenu>
 

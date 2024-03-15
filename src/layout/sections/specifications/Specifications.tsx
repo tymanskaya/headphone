@@ -24,7 +24,7 @@ const specificationData =[
 ]
 export const Specifications: React.FC = () => {
     return (
-        <S.Specifications>
+        <S.Specifications id={"specification"}>
             <Container>
                 <S.GridWrapper>
                         <SectionTitle width={'460px'}

@@ -31,7 +31,7 @@ const productData=[
 ]
 export const LatestProduct: React.FC = () => {
     return (
-        <S.LatestProduct>
+        <S.LatestProduct id={'product'}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} gap={'25px'} wrap={'wrap'}>
                     <SectionTitle>Our Latest Product</SectionTitle>

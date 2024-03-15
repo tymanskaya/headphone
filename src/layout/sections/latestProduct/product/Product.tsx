@@ -15,7 +15,7 @@ export const Product: React.FC<ProductPropsStyle> = (props:ProductPropsStyle) =>
         <S.Product>
         <S.PhotoWrapper color={props.color}>
             <S.PhotoHeadPhones src={props.src}/>
-            <S.LinkCard href='' color={props.color}>
+            <S.LinkCard href='' color={props.color} title={'Add to Basket'}>
                 <Icon iconId={'card1'}/>
             </S.LinkCard>
         </S.PhotoWrapper>

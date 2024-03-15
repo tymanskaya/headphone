@@ -34,6 +34,13 @@ const LinkCard = styled.a<{ color: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: ${theme.animations.transition};
+
+    &:hover {
+        transform: scale(1.2);
+       
+
+    }
 `
 const PhotoHeadPhones = styled.img`
     position: absolute;

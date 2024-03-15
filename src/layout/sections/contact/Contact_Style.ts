@@ -47,7 +47,7 @@ const Text = styled.p`
 
 
 `
-const MailDetails = styled.div`
+const MailDetails = styled.form`
 padding: 17px 30px;
     margin-top: 30px;
     width: 100%;

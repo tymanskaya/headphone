@@ -14,7 +14,7 @@ const navigationMobileStyle=[
         title: 'Login',
     },
 ]
-export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props:{menuItems: Array<string>})  => {
+export const MobileMenu: React.FC = ()  => {
    const [menuIsOpen, setmenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => {setmenuIsOpen(!menuIsOpen)}
     return (
@@ -24,7 +24,7 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props:{menuItem
                 <span></span>
             </S.StyledBurgerMenu>
             <S.MenuPopup isOpen={menuIsOpen} onClick={()=> {setmenuIsOpen(false)}}>
-                <Menu menuItems={props.menuItems} />
+                <Menu/>
                 <S.NavigationMobile>
                     {navigationMobileStyle.map((s, index) =>{
                         return (

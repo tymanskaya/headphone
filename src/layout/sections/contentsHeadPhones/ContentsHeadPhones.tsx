@@ -25,7 +25,7 @@ const contentData =[
 ]
 export const ContentsHeadPhones: React.FC = () => {
     return (
-        <S.ContentsHeadPhones>
+        <S.ContentsHeadPhones id={'contain'}>
             <Container>
                 <S.GridWrapperContents>
                 <S.PhotoWrapper>
