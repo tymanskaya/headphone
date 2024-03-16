@@ -1,6 +1,7 @@
 import {theme} from "../../../Styles/Theme";
 import styled, {css} from "styled-components";
 import {font} from "../../../Styles/Common";
+import {Link} from "react-scroll";
 
 //Menu
 
@@ -14,13 +15,14 @@ const StyledMenu = styled.nav`
 `
 const ListItem = styled.li`
 `
-const Link = styled.a`
+const NavLink = styled(Link)`
     ${font({family:"'Rubik', sans-serif", weight: 500, Fmax: 30, Fmin: 30  })};
     color: ${theme.colors.iconBG};
     font-family: 'Rubic', sans-serif;
     font-weight: 500;
     line-height: 140%;
     text-align: left;
+    cursor: pointer;
 `
 
 //MobileMenu
@@ -156,7 +158,7 @@ const StyledDesctopMenu = styled.div`
 export const S ={
     StyledMenu,
     ListItem,
-    Link,
+    NavLink,
     MobileMenuStyled,
     StyledBurgerMenu,
     MenuPopup,

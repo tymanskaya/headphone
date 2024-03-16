@@ -6,7 +6,6 @@ import {Container} from "../../components/Container";
 import {MenuFooter} from "./menuFooter/MenuFooter";
 import {S} from "../footer/Footer_Styles"
 
-const items= ["Home", "About", "Product"]
 const socialItemData =[
     {
     iconId: 'inst',
@@ -34,7 +33,7 @@ export const Footer: React.FC = () => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'} wrap={'wrap'}>
                     <Logo/>
-                    <MenuFooter menuItems={items}/>
+                    <MenuFooter/>
                     <S.SocialList>
                         {socialItemData.map((s, index) => {
                             return (

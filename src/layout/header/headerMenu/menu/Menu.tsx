@@ -30,7 +30,8 @@ export const Menu = () => {
                 {items.map((item, index) =>{
                     return (
                     <S.ListItem key={index}>
-                        <S.Link href={`#${item.href}`}>{item.title}</S.Link>
+                        <S.NavLink to={item.href}
+                                   smooth={true}>{item.title}</S.NavLink>
                     </S.ListItem>
                 )})}
             </ul>
