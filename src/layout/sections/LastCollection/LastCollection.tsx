@@ -9,7 +9,7 @@ export const LastCollection: React.FC = () => {
     return (
         <StyledLastCollection id={"latestCollection"}>
             <Container>
-                <FlexWrapper direction={'column'} align={'center'} gap={'70px'}>
+                <FlexWrapper direction={'column'} align={'center'} gap={'130px'}>
                     <SectionTitle width={'470px'}
                                   textAlign={'center'} >Our Latest colour collection 2021</SectionTitle>
                     <Slider/>

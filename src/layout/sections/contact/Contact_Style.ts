@@ -48,7 +48,7 @@ const Text = styled.p`
 
 `
 const MailDetails = styled.form`
-padding: 17px 30px;
+    padding: 17px 30px;
     margin-top: 30px;
     width: 100%;
     min-height: 61px;
@@ -57,20 +57,32 @@ padding: 17px 30px;
     background-color: ${theme.colors.iconBG};
     position: relative;
     display: flex;
-    
-    ${Button}{
+
+    ${Button} {
         position: absolute;
         background-color: ${theme.colors.accent};
         color: ${theme.colors.iconBG};
         top: 0;
         right: 0;
         bottom: 0;
-        @media ${theme.media.mobile}{
-            width: 100px;
 
+        @media ${theme.media.mobile} {
+            width: 100px;
         }
-        
+
     }
+
+    ${Button}:hover {
+        
+        background-color: rgb(255, 73, 72, 0.9)
+
+    }
+
+    ${Button}:active {
+        background-color: #333;
+
+    }
+
 
 
 `

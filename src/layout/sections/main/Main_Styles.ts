@@ -2,6 +2,7 @@ import {theme} from "../../../Styles/Theme";
 import {font} from "../../../Styles/Common";
 import styled from "styled-components";
 import music from '../../../assets/images/freepik-Music-inject-4_1.webp'
+import {Button} from "../../../components/Button";
 
 const Main = styled.section`
     min-height: 100vh;
@@ -9,6 +10,7 @@ const Main = styled.section`
     background: inherit;
     display: flex;
     margin-top: 108px;
+    
 
 
 
@@ -40,6 +42,17 @@ const StyledInfo = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    ${Button}:hover {
+        background-color: rgb(246, 245, 245);
+  
+
+    }
+
+    ${Button}:active {
+
+        background: rgb(255, 255, 255);
+    }
 
 `
 const TextInfo = styled.div`

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styled from "styled-components";
 import {theme} from "../Styles/Theme";
 import {font} from "../Styles/Common";
@@ -13,6 +13,7 @@ export const Button = styled.button`
     color: ${theme.colors.accent};
     line-height: 140%;
     letter-spacing: 0;
+   
   
     
   
